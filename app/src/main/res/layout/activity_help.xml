@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.blainecrooks.herald.helpActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="384dp"
+        android:layout_marginTop="2dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_help"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wifiButton"
+        app:layout_constraintStart_toStartOf="@+id/wifiButton"
+        app:layout_constraintTop_toTopOf="@+id/reportButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/reportButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="58dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/printerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/issues" />
+
+    <ImageView
+        android:id="@+id/commonIssues"
+        android:layout_width="399dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="93dp"
+        android:layout_marginTop="91dp"
+        app:layout_constraintBottom_toBottomOf="@+id/printerButton"
+        app:layout_constraintStart_toStartOf="@+id/reportButton"
+        app:layout_constraintTop_toTopOf="@+id/reportButton"
+        app:srcCompat="@drawable/common" />
+
+    <ImageButton
+        android:id="@+id/printerButton"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginBottom="221dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="6dp"
+        android:adjustViewBounds="true"
+        android:background="@color/green"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wifiButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reportButton"
+        app:srcCompat="@drawable/printer" />
+
+    <ImageButton
+        android:id="@+id/wifiButton"
+        android:layout_width="0dp"
+        android:layout_height="187dp"
+        android:layout_marginEnd="7dp"
+        android:adjustViewBounds="true"
+        android:background="@color/purple"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/printerButton"
+        app:layout_constraintTop_toTopOf="@+id/printerButton"
+        app:srcCompat="@drawable/wifi" />
+
+    <ImageButton
+        android:id="@+id/passwordButton"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:adjustViewBounds="true"
+        android:background="@color/orange"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/printerButton"
+        app:srcCompat="@drawable/password" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="11dp"
+        android:adjustViewBounds="true"
+        android:background="@color/yellow"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passwordButton"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/projector" />
+
+</android.support.constraint.ConstraintLayout>
