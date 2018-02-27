@@ -15,7 +15,7 @@
         android:layout_marginBottom="384dp"
         android:layout_marginTop="2dp"
         android:theme="@style/AppTheme.AppBarOverlay"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+        app:layout_constraintBottom_toTopOf="@+id/projectorButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -38,8 +38,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/wifiButton"
         app:layout_constraintStart_toStartOf="@+id/wifiButton"
-        app:layout_constraintTop_toTopOf="@+id/reportButton"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButton"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="115dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/teal"
+        android:text="Log Out"
+
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/reportButton"
@@ -103,13 +120,13 @@
         android:adjustViewBounds="true"
         android:background="@color/orange"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintEnd_toStartOf="@+id/projectorButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/printerButton"
         app:srcCompat="@drawable/password" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/projectorButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="11dp"
