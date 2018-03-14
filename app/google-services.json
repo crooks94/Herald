@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "367470761577",
+    "firebase_url": "https://herald-eba58.firebaseio.com",
+    "project_id": "herald-eba58",
+    "storage_bucket": "herald-eba58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367470761577:android:073f2d705fc09ce1",
+        "android_client_info": {
+          "package_name": "com.example.blainecrooks.herald"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367470761577-5mhr8pcqa7bpa24ubunlc68sq694btek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blainecrooks.herald",
+            "certificate_hash": "3dc75fb4e738ad5d2ed6904f19459df0458c31f5"
+          }
+        },
+        {
+          "client_id": "367470761577-37i81iq3oefcjjeb440bmglm9hl98mlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0L63X4SLmlQB7lARoAj8epWHDKN1gS44"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367470761577-37i81iq3oefcjjeb440bmglm9hl98mlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
