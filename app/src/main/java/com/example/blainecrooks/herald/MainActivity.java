@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView regView;
 
     private FirebaseAuth firebaseAuth;
-
     private ProgressDialog progressDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        if (firebaseAuth.getCurrentUser() != null)
-        {
-            startActivity(new Intent(getApplicationContext(), helpActivity.class));
-            finish();
-        }
+//        if (firebaseAuth.getCurrentUser() != null)
+//        {
+//            startActivity(new Intent(getApplicationContext(), helpActivity.class));
+//            finish();
+//        }
 
         loginButton = (Button) findViewById(R.id.loginButton);
         logEmail = (EditText) findViewById(R.id.logEmail);

@@ -17,7 +17,6 @@ public class requestActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
     }
 
 }
