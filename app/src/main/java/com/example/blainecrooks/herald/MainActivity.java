@@ -3,9 +3,11 @@ package com.example.blainecrooks.herald;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -17,13 +19,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     private Button loginButton;
     private EditText logEmail;
     private EditText logPassword;
     private TextView regView;
+
+
 
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -32,13 +38,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
+
         firebaseAuth = FirebaseAuth.getInstance();
 
-//        if (firebaseAuth.getCurrentUser() != null)
-//        {
-//            startActivity(new Intent(getApplicationContext(), helpActivity.class));
-//            finish();
-//        }
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        //final String userEmail = user.getEmail();
+       // String uid = firebaseAuth.getCurrentUser().getUid();
+
+
+        if (user != null) {
+            if (firebaseAuth.getCurrentUser().getUid().equals("TvLf7AY679OgE0vxzlgBXH59ur53")) {
+                startActivity(new Intent(getApplicationContext(), AdminMainActivity.class));
+
+            } else {
+                startActivity(new Intent(getApplicationContext(), helpActivity.class));
+                finish();
+            }
+        }
 
         loginButton = (Button) findViewById(R.id.loginButton);
         logEmail = (EditText) findViewById(R.id.logEmail);
@@ -53,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
     }
 
     private void userLogin(){
@@ -60,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String password = logPassword.getText().toString().trim();
 
 
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)){
             //email is empty
             Toast.makeText(this, "Please Enter Email", Toast.LENGTH_SHORT).show();
 
@@ -83,13 +105,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this, "Signing In", Toast.LENGTH_LONG);
+                    //admin login
+                    if (firebaseAuth.getCurrentUser().getUid().equals("TvLf7AY679OgE0vxzlgBXH59ur53")){
+                        Toast.makeText(MainActivity.this, "Signing In", Toast.LENGTH_LONG);
+                        startActivity(new Intent(getApplicationContext(), AdminMainActivity.class));
+
+                    }
+                    //user login
+                    else {
+                        Toast.makeText(MainActivity.this, "Signing In", Toast.LENGTH_LONG);
 
 //                    Intent log = new Intent(MainActivity.this, helpActivity.class);
-                    startActivity(new Intent(getApplicationContext(), helpActivity.class));
-                    finish();
+                        startActivity(new Intent(getApplicationContext(), helpActivity.class));
+                        finish();
+                    }
 
-                }else {
+                }
+                //failure
+                else {
                     Toast.makeText(MainActivity.this, "Sign In Error", Toast.LENGTH_LONG);
                 }
             }

@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (TextUtils.isEmpty(password)) {
-            //email is empty
+            //password is empty
             Toast.makeText(this, "Please Enter Password", Toast.LENGTH_SHORT).show();
 
             //stops function executing further
@@ -87,7 +87,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (TextUtils.isEmpty(passwordCon)) {
-            //email is empty
+            //password confirm is empty
+
             Toast.makeText(this, "Please Re-enter Password", Toast.LENGTH_SHORT).show();
 
             //stops function executing further

@@ -3,4 +3,15 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_help">helpActivity</string>
     <string name="title_activity_request">requestActivity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_admin_main">AdminMainActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="title_activity_view_orders">ViewOrders</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
