@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.blainecrooks.herald.helpActivity"
     tools:layout_editor_absoluteY="25dp"
-    android:background="@color/dark_grey">
+    android:background="@color/blue">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,7 +15,7 @@
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dark_grey"
+        android:background="@color/blue"
         tools:context="com.example.blainecrooks.herald.helpActivity"
         tools:layout_editor_absoluteY="25dp">
 
@@ -27,7 +27,7 @@
             android:layout_marginBottom="400dp"
             android:layout_marginTop="2dp"
             android:background="@color/blue"
-            android:backgroundTint="@color/dark_grey"
+            android:backgroundTint="@color/blue"
             android:theme="@style/AppTheme.AppBarOverlay"
             app:layout_constraintBottom_toTopOf="@+id/projectorButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
-                android:backgroundTint="@color/dark_grey"
+                android:backgroundTint="@color/blue"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.AppBarLayout>
@@ -53,27 +53,27 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/wifiButton"
             app:layout_constraintStart_toStartOf="@+id/wifiButton"
-            app:layout_constraintTop_toBottomOf="@+id/logoutButton"
+
             app:layout_constraintVertical_bias="1.0"
 
             />
 
-        <Button
-            android:id="@+id/logoutButton"
-            android:layout_width="115dp"
-            android:layout_height="41dp"
-            android:layout_marginBottom="6dp"
-            android:layout_marginEnd="43dp"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/teal"
-            android:text="Log Out"
+        <!--<Button-->
+            <!--android:id="@+id/logoutButton"-->
+            <!--android:layout_width="115dp"-->
+            <!--android:layout_height="41dp"-->
+            <!--android:layout_marginBottom="6dp"-->
+            <!--android:layout_marginEnd="43dp"-->
+            <!--android:layout_marginStart="43dp"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:background="@color/teal"-->
+            <!--android:text="Log Out"-->
 
-            app:layout_constraintBottom_toTopOf="@+id/include"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <!--app:layout_constraintBottom_toTopOf="@+id/include"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.502"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
 
         <ImageButton
             android:id="@+id/reportButton"
@@ -120,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="187dp"
             android:layout_marginEnd="7dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="221dp"
             android:adjustViewBounds="true"
             android:background="@color/purple"
             android:scaleType="fitCenter"
@@ -147,28 +147,29 @@
         <ImageButton
             android:id="@+id/projectorButton"
             android:layout_width="198dp"
-            android:layout_height="125dp"
+            android:layout_height="150dp"
             android:layout_marginBottom="50dp"
             android:layout_marginEnd="7dp"
             android:layout_marginTop="40dp"
             android:adjustViewBounds="true"
             android:background="@color/yellow"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/wifiButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/passwordButton"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
             app:srcCompat="@drawable/projector" />
 
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp" />
+        <!--<android.support.constraint.Guideline-->
+            <!--android:id="@+id/guideline"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--app:layout_constraintGuide_begin="20dp" />-->
 
     </android.support.constraint.ConstraintLayout>
     <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
